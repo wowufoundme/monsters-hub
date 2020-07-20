@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBox />
+        <SearchBox searchText={this.state.searchText} />
         <CardList monsters={this.state.monsters}/>
       </div>
     );
