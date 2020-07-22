@@ -46,11 +46,21 @@
 }
 
 
-.theme-button {
+.theme-button-light {
   padding: 10px 30px;
   font-size: 14px;
   margin: 20px;
   outline: none;
   background: #ffffff;
+  border: none;
+}
+
+.theme-button-dark {
+  padding: 10px 30px;
+  font-size: 14px;
+  margin: 20px;
+  outline: none;
+  background: #0a0a0a;
+  color: #ededed;
   border: none;
 }

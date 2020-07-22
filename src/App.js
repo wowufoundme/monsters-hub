@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <div className={ this.state.darkTheme ? "App-dark" : "App-light" }>
         <Header title="Monster's Club" />
-        <button className='theme-button' onClick={this.handleClick} >
+        <button className={ this.state.darkTheme ? "theme-button-light" : "theme-button-dark" } onClick={this.handleClick} >
           Switch to { this.state.darkTheme ? <span>Light</span> : <span>Dark</span> } Theme
         </button>
         <SearchBox 
