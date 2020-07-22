@@ -11,22 +11,12 @@ class App extends Component {
     super();
 
     this.state = {
-      monsters : [],
       searchField : ''
     };
   }
 
-  // Gets executed every time the component is mounted. 
-  // To check if state is updated use componentDidUpdate? function.
-  componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(users => this.setState({ monsters: users }));
-  }
-
   render() {
-    const { monsters, searchField } = this.state;
-    const filteredMonsters = monsters.filter(monster => monster.name.toLowerCase().includes(searchField.toLowerCase()))
+    const { searchField } = this.state;
     return (
       <div className="App">
         <Header title="Monster's Club"/>
@@ -34,7 +24,7 @@ class App extends Component {
           placeholder='Search Monsters...' 
           handleChange={searchText => this.setState({ searchField: searchText.target.value })} 
         />
-        <CardList monsters={filteredMonsters}/>
+        <CardList searchField={searchField}/>
       </div>
     );
   }
