@@ -6,20 +6,27 @@ import Header from './components/header/header.component';
 
 class App extends Component {
 
-  // Remember to put constructor in the class which holds the super function.
   constructor(props) {
     super();
 
     this.state = {
+      darkTheme: true,
       searchField : ''
     };
+  }
+
+  handleClick = () => {
+    this.setState({ darkTheme: !this.state.darkTheme });
   }
 
   render() {
     const { searchField } = this.state;
     return (
-      <div className="App">
-        <Header title="Monster's Club"/>
+      <div className={ this.state.darkTheme ? "App-dark" : "App-light" }>
+        <Header title="Monster's Club" />
+        <button className='theme-button' onClick={this.handleClick} >
+          Switch to { this.state.darkTheme ? <span>Light</span> : <span>Dark</span> } Theme
+        </button>
         <SearchBox 
           placeholder='Search Monsters...' 
           handleChange={searchText => this.setState({ searchField: searchText.target.value })} 
