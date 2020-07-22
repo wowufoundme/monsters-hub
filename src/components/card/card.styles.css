@@ -7,7 +7,7 @@
     cursor: pointer;
     -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
-    transform: scale(0);
+    transform: scale(1);
     transition: transform 0.25s ease-out;
   }
   
