@@ -19,7 +19,7 @@ class App extends Component {
   // Gets executed every time the component is mounted. 
   // To check if state is updated use componentDidUpdate? function.
   componentDidMount() {
-    fetch('http://jsonplaceholder.typicode.com/users')
+    fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users => this.setState({ monsters: users }));
   }
