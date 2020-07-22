@@ -1,19 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .search-container {
   padding: 50px;
-  background-color: #ededed;
+  background-color: #ffdd03;
   margin-bottom: 40px;
 }
 
 .search {
   -webkit-appearance: none;
+  background-color: #0a0a0a;
   border: none;
-  border-bottom: 4px solid #3498db;
+  border-bottom: 4px solid #ffffff;
   outline: none;
   padding: 10px;
-  width: 350px;
+  width: 700px;
+  height: 100px;
   line-height: 30px;
   margin-bottom: 30px;
-  font-size: 16px;
+}
+
+.search {
+  padding-left: 40px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-family: 'Pacifico', cursive;
+  color: #ffffff;
 }
 
 .search:focus {
